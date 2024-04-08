@@ -181,7 +181,7 @@
 % For fundamental structures
 \newcommand*{\headerfirstnamestyle}[1]{{\fontsize{15pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{15pt}{1em}\headerfont\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\color{russell-black} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\vspace{2mm}\fontsize{11pt}{1em}\bodyfont\scshape\color{russell-black} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{text} #1}} % Phone Number
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
@@ -479,14 +479,38 @@
       \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
-          \href{tel:@mobile}{\faIcon{phone} \@mobile}
+          \href{tel:@mobile}{\faIcon{phone} \textcolor{blue}{\@mobile}}
           \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{mailto:\@email}{\faIcon{envelope} \@email}%
+          \href{mailto:\@email}{\faIcon{envelope} \textcolor{blue} {\@email}}%
+        }%
+      \ifthenelse{\isundefined{\@homepage}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://\@homepage}{\faIcon{globe} \textcolor{blue}{\@homepage}}%
+        }%
+      \ifthenelse{\isundefined{\@github}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://github.com/\@github}{\faIcon{github} \textcolor{blue}{\@github}}%
+        }%
+      \ifthenelse{\isundefined{\@linkedin}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.linkedin.com/in/\@linkedin}{\faIcon{linkedin} \textcolor{blue}{\@linkedin}}%
+        }%
+        \ifthenelse{\isundefined{\@leetcode}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://leetcode.com/\@leetcode}{\textcolor{blue}{\includegraphics[width=1em,height=1em]{leetcode-icon.png} \@leetcode}}%
         }%
       \ifthenelse{\isundefined{\@dateofbirth}}%
         {}%
@@ -494,18 +518,6 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           % \mbox prevents wrapping of elements%
           \mbox{\faBirthdayCake\acvHeaderIconSep\@dateofbirth}%
-        }%
-      \ifthenelse{\isundefined{\@homepage}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://\@homepage}{\faIcon{globe} \@homepage}%
-        }%
-      \ifthenelse{\isundefined{\@github}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://github.com/\@github}{\faIcon{github} \@github}%
         }%
       \ifthenelse{\isundefined{\@gitlab}}%
         {}%
@@ -525,23 +537,11 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\acvHeaderIconSep\@stackoverflowname}%
         }%
-      \ifthenelse{\isundefined{\@linkedin}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.linkedin.com/in/\@linkedin}{\faIcon{linkedin} \@linkedin}%
-        }%
       \ifthenelse{\isundefined{\@orcid}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://orcid.org/\@orcid}{\faOrcid\acvHeaderIconSep\@orcid}%
-        }%
-        \ifthenelse{\isundefined{\@leetcode}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://leetcode.com/\@leetcode}{\includegraphics[width=1em,height=1em]{leetcode-icon.png} \@leetcode}%
         }%
       \ifthenelse{\isundefined{\@twitter}}%
         {}%

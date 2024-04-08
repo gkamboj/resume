@@ -1,13 +1,19 @@
 # autoCV
 
+### This forked from https://github.com/jitinnair1/autoCV
+
 A clean CV template in LaTeX along with a GitHub action that complies the `*.tex` file and publishes a new PDF version when new changes are pushed to the repo
 
 ## Template Design
 
-The template is designed to be clean with sections for
-- Tabular sections for Work Experience, Education and Projects
-- Support for including a list of publications read from a `*.bib` file
+The template is taken from https://www.overleaf.com/latex/templates/resume-public/hmhyxvxfspsw. It offers:
+- Dedicated tex file for each section
+- Multiple formatting options for most of the sections
 - Header with Font Awesome icons
+- Multipl font options
+and much more.
+
+This template can also be replaced with any other template of your choice.
 
 ## Quickstart
 - Fork this repo (you can use the `Use this template` button)
@@ -38,14 +44,5 @@ Also, if you have a premium subscription to Overleaf, you can use Overleaf's Git
 - If you'd like a custom URL like `cv.name.com` check out [this page](https://github.com/jitinnair1/autoCV/wiki/Custom-URL-for-your-CV)
 - If you want to add use different versions of the CV for different langauges, you can modify the script [as seen here](https://github.com/MateusRosario/myAutoCV/blob/main/.github/workflows/build.yml) (from Mateus Rosario's [fork](https://github.com/MateusRosario/myAutoCV) of this repo)  
 
-## Issues
-Please start a new discussion or issue if you encounter problems
 
-PS: If you liked the template, do star :star: it! Thanks!
-
-
-### Also, check out:
-
-- [gradfolio](https://github.com/jitinnair1/gradfolio) - a minimal, quick-setup template for a personal website/portfolio
-- [Tail](https://github.com/jitinnair1/tail) - a minimal, quick-setup template for a blog
-
+PS: If you liked the template, do star :star: the [original repository](https://github.com/jitinnair1/autoCV) ! Thanks!
