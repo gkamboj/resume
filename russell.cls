@@ -108,7 +108,7 @@
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\color{black} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{9.5pt}{1em}\bodyfontlight\slshape\color{black} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfontlight\slshape\color{russell} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{10.5pt}{1em}\bodyfontlight\upshape\color{black} #1}} % Content under Experience and Projects
+\newcommand*{\descriptionstyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\upshape\color{black} #1}} % Content under Experience and Projects
 
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{black} #1}}
 \newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{black} #1}}
@@ -120,14 +120,14 @@
 
 \newcommand*{\honordatestyle}[1]{{\fontsize{9.5pt}{1em}\bodyfont\color{graytext} #1}}
 \newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{0em}\bodyfont\color{black} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{black} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{black} #1}}
 
 \newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\recipienttitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\lettertitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
 \newcommand*{\letterdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\lettertextstyle}{\fontsize{10pt}{1.4em}\bodyfontlight\upshape\color{graytext}}
+\newcommand*{\lettertextstyle}{\fontsize{10pt}{1.4em}\bodyfont\upshape\color{graytext}}
 \newcommand*{\letternamestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\letterenclosurestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
 
@@ -294,6 +294,7 @@
 }
 
 \newcommand*{\projectentry}[2]{
+
     \vspace{-1.5mm}
     \entrytitlestyle{#1} \descriptionstyle{#2}
 }
@@ -389,10 +390,11 @@
   \vspace{-3.5mm} 
 }
 
-\newcommand*{\cvproject}[2]{%
+\newcommand*{\cvproject}[2]{
   % \vspace{3.0mm}
-  \underline{\textbf{#1}} \\ % Project name
-  \begin{cvitems} % Project details
+  \color{black}
+  \underline{\textbf{#1}} \\
+  \begin{cvitems}
   \vspace{3mm}
     #2
   \end{cvitems}
