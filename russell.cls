@@ -226,7 +226,7 @@
         {}
         {
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://leetcode.com/\@leetcode}{\textcolor{blue}{\includegraphics[width=1em,height=1em]{leetcode-icon.png} \@leetcode}}%
+          \href{https://leetcode.com/\@leetcode}{\textcolor{blue}{\includegraphics[width=1em,height=1em]{resources/leetcode-icon.png} \@leetcode}}%
         }
       \ifthenelse{\isundefined{\@extrainfo}}%
         {}%
