@@ -67,6 +67,7 @@
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
+
 % Needed to deal hyperlink
 \RequirePackage[hidelinks,unicode,pdfpagelabels=false]{hyperref}
 \hypersetup{%
@@ -163,6 +164,7 @@
 
 \usepackage{fontawesome5}
 \usepackage{tabularx}
+\usepackage{multirow}
 
 % \renewcommand*{\rmdefault}{ua1} % Arial as the default font
 
@@ -416,7 +418,7 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
+\newcommand{\acvSectionTopSkip}{1mm}
 \newcommand{\acvSectionContentTopSkip}{1.5mm}
 
 
@@ -686,13 +688,18 @@
 
 % Usage: \cventry{<title>}{<date>}{<description>} | Project
 \newcommand*{\cventry}[3]{%
-  \vspace{-0.5mm}
+  \vspace{-2.5mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \entrytitlestyle{#1} & \entrydatestyle{#2} \\
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
   \end{tabular*}%
+}
+
+\newcommand*{\projectentry}[2]{%
+    \vspace{-1.5mm}
+    \entrytitlestyle{#1} \descriptionstyle{#2}
 }
 
 \newcommand*{\cvedentry}[3]{%
@@ -716,7 +723,7 @@
 % Define an entry of cv information : Experience
 % Usage: \cventry{<position>}{<date>}{<description>}
 \newcommand*{\cventrynew}[3]{%
-  \vspace{-1.0mm}
+  \vspace{-1.5mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -855,4 +862,13 @@
       \\\\\\
       \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
     }
+}
+
+\newcommand*{\cvproject}[2]{%
+  % \vspace{3.0mm}
+  \underline{\textbf{#1}} \\ % Project name
+  \begin{cvitems} % Project details
+  \vspace{3mm}
+    #2
+  \end{cvitems}
 }
