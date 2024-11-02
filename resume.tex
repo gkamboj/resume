@@ -1,32 +1,13 @@
-%-------------------------------------------------------------------------------
-% CONFIGURATIONS
-%-------------------------------------------------------------------------------
-
 % Original template: https://www.overleaf.com/latex/templates/resume-public/hmhyxvxfspsw
 
-% A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt]{russell}
-
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=0.5cm, footskip=.5cm}
-
 \fontdir[fonts/]
-
 \colorlet{russell}{russell-black}
-
-
-% Set false if you don't want to highlight section with russell color
 \setbool{acvSectionColorHighlight}{false}
-
-% If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
-
-%-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%-------------------------------------------------------------------------------
 \name{\bf{GAURAV}}{\bf{KAMBOJ}}
 \position{Software Development Engineer}
-% \position{Software Development Engineer{\enskip\cdotp\enskip}Security Expert}
 
 \mobile{+91-9646914195}
 \email{gauravkambojtu@gmail.com}
@@ -35,34 +16,14 @@
 \linkedin{kambojgaurav}
 \leetcode{kambojgaurav}
 
-%-------------------------------------------------------------------------------
 \begin{document}
 
-
-
 \makecvheader
-% \begin{tabularx}{\linewidth}{@{} C @{}}
-% \href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-% \href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-% \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-% \href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-% \href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
-% \end{tabularx}
-
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
 \input{cv/summary.tex}
 \input{cv/experience.tex}
 \input{cv/skills.tex}
 \input{cv/projects.tex}
 \input{cv/education.tex}
-% \input{cv/Competitions.tex}
-% \input{cv/certificates.tex}
-% \input{cv/achievements.tex}
-% \input{cv/languages.tex}
 
-\vspace*{-1cm}%\fill}
-%-------------------------------------------------------------------------------
+\vspace*{-1cm}
 \end{document}
