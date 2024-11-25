@@ -299,6 +299,10 @@
     \entrytitlestyle{#1} \descriptionstyle{#2}
 }
 
+\newcommand*{\overview}[1]{
+    \descriptionstyle{#1}
+}
+
 \newcommand*{\cvedentry}[3]{
   \vspace{-0.5mm}
   \setlength\tabcolsep{0pt}
@@ -399,28 +403,6 @@
     #2
   \end{cvitems}
 }
-
-\newcommand{\ExternalLink}{%
-    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
-        \begin{scope}[x=1ex, y=1ex]
-            \clip (-0.1,-0.1) 
-                --++ (-0, 1.2) 
-                --++ (0.6, 0) 
-                --++ (0, -0.6) 
-                --++ (0.6, 0) 
-                --++ (0, -1);
-            \path[draw, 
-                line width = 0.5, 
-                rounded corners=0.5] 
-                (0,0) rectangle (1,1);
-        \end{scope}
-        \path[draw, line width = 0.5] (0.5, 0.5) 
-            -- (1, 1);
-        \path[draw, line width = 0.5] (0.6, 1) 
-            -- (1, 1) -- (1, 0.6);
-        }
-    }
-
 
 \newcommand{\projectwithlink}[2]{%
     {#1}~\href{#2}{\textcolor{russell-skyblue}{\scriptsize\faExternalLink*}}
