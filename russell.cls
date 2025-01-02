@@ -261,21 +261,15 @@
   \color{sectiondivider}\vhrulefill{0.5pt}
 }
 
-\newcommand{\cvsubsection}[1]{
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
-  \subsectionstyle{#1}
-  \phantomsection
-}
 
-\newenvironment{cvparagraph}{
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
-  \paragraphstyle
-}{%
-  \par
-  \vspace{-4mm} 
-}
+% \newenvironment{cvparagraph}{
+%   \vspace{\acvSectionContentTopSkip}
+%   \vspace{-3mm}
+%   \paragraphstyle
+% }{%
+%   \par
+%   \vspace{-4mm} 
+% }
 
 \newenvironment{cventries}{
   \vspace{\acvSectionContentTopSkip}
@@ -304,7 +298,7 @@
 }
 
 \newcommand*{\cvedentry}[3]{
-  \vspace{-0.5mm}
+  \vspace{-1.5mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{-8pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -348,27 +342,9 @@
 }
 
 
-\newenvironment{cvhonors}{
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{16.5cm} C{3cm} R{2.5cm}}
-}{
-    \end{tabular*}
-}
-
-
-\newcommand*{\cvhonor}[2]{
-  \begin{tabular}[t]{@{}l@{\hfill}}
-    \honortitlestyle{#1} \\
-    \honordatestyle{#2}
-  \end{tabular}
-}
-
 \newenvironment{cvskills}{
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
+  \vspace{-2.5mm}
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
@@ -407,4 +383,12 @@
 \newcommand{\projectwithlink}[2]{%
     {#1}~\href{#2}{\textcolor{russell-skyblue}{\scriptsize\faExternalLink*}}
     % {#1}~\href{#2}{\textcolor{russell-skyblue}{\faExternalLinkSquare*}}
+}
+
+\newcommand*{\achievements}[1]{
+  \color{black}
+  \begin{cvitems}
+  \vspace{1.5mm}
+    #1
+  \end{cvitems}
 }
