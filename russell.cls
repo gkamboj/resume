@@ -39,7 +39,7 @@
 \RequirePackage{bookmark}
 
 \newcommand*{\fontdir}[1][fonts/]{\def\@fontdir{#1}}
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=0.5cm, footskip=.5cm}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=0.3cm, footskip=.3cm}
 
 \fancyhfoffset{0em}
 \renewcommand{\headrulewidth}{0pt}
@@ -158,7 +158,7 @@
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
+\newcommand{\acvHeaderAfterSocialSkip}{4mm}
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 \newcommand{\acvSectionTopSkip}{1mm}

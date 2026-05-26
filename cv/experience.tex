@@ -3,38 +3,47 @@
 \begin{cventries}
 
   \cventry
-    {SAP India}  {\bf {Gurgaon, IN}}
-    {\textnormal{\textit{Development Consultant  \hfill {September 2021 - Present}}}}
-    {   
-        \cvproject{South Africa's leading pharmacy chain}{
-            \item {Designing and developing e-commerce and quick commerce platforms for SA's leading pharmacy chain, aimed at supporting traditional and 60-minute delivery options, with scalable backend systems to handle high transaction volumes.}
-            \item {Integrated \textbf{payment gateways} such as, PayU, Ozow, and PayGate to facilitate diverse payment methods, including credit cards, EFT, and digital wallets, with mechanisms to handle refunds, retries and failure scenarios.}
-            \item {Engineered backend workflows for order placement and processing, focusing on reliability, and seamless user experience.}
+    {SAP Labs}  {\bf {Gurgaon, IN}}
+    {\textnormal{\textit{Developer  \hfill {September 2021 - Present}}}}
+    {
+        \cvproject{CX AI Toolkit: Enterprise AI platform serving 100+ customers}{
+            \item {Designed and developed the \textbf{Catalog Optimization Agent} using LangGraph, automating product attribute population and description generation for commerce catalogs with up to \textbf{1M+ products}, replacing a fully manual enrichment process.}
+%            \item {Architected support for complex product hierarchical attribute types with multi-language localization, handling a \textbf{20x data volume increase} over primitive types through batched processing and feature-flag-controlled rollouts.}
+            \item {Built the \textbf{AI Tools Builder}: Go gRPC service serving custom tool definitions to agents at runtime, with GraphQL APIs for tool management, Trie-based schema traversal for entity extraction, and prompt validation against customer data schemas.}
+            \item {Built the \textbf{Semantic Search} microservice: Go GraphQL gateway proxying to a Python LangGraph ReAct agent over gRPC, combining vector embeddings (HNSW ANN search on SAP HANA) with TOON encoding for natural-language-to-SQL generation over structured business data.}
+            \item {Built the \textbf{Communication Insights} microservice: LangGraph agent crawling Outlook/Gmail mailboxes, applying PII obfuscation, and generating insights from email threads. Integrated Azure Event Hub for real-time email change notifications with cursor-based pagination.}
+            \item {Owned LangGraph and LangChain major version upgrades across multiple services, managing breaking-change migrations with backward compatibility. Managed OSS compliance (BlackDuck, Checkmarx) across releases.}
         }
-        
+
         \vspace{1mm}
-        
-        \cvproject{India's largest B2B fashion store}{
-            \item {Enhanced the backend of India’s largest B2B fashion commerce platform using SAP Commerce at the core and dedicated Spring Boot based microservices for the primary functionalities.}
-            \item{Designed the architecture for \textit{Tag Engine} microservice aimed at implementing tagging functionality, with scalability to accommodate over 3 million products, laying the groundwork for future development.}
-            \item {\textbf{Led a team} of four to implement location-based pricing, enabling sellers to offer region-specific pricing based on PIN codes, \textbf{increasing sellers' revenue by 15\%} on average.}
-            \item {\textbf{Reduced shipping costs by up to 50\%} by introducing a multi-warehouse strategy, allowing over 1,00,000 sellers to fulfill orders from the nearest warehouse.}
-            \item {Enhanced the product creation flow by implementing the {\bf parallel processing of product data} received from Kafka.}
-          }
+
+        \cvproject{Forward Deployed Engineering: Agentic AI solutions for global enterprises}{
+            \item {Designed collections workflows for two global FMCG enterprises using LangGraph state graphs with HITL approval gates, email drafting, and SAP FSCM integration for contact recording. Built custom checkpointer for pause/resume across approval cycles.}
+            \item {\textbf{Led architecture and design} for a Fortune 500 chemical company’s procurement automation: agent-driven order confirmation extraction from 1000+ daily supplier emails, PO discrepancy detection, and automated reconciliation.}
+        }
+
+        \vspace{1mm}
+
+        \cvproject{E-commerce platform implementations}{
+            \item {Integrated payment gateways (PayU, Ozow, PayGate) for South Africa’s leading pharmacy chain, handling credit cards, EFT, and digital wallets with retry logic and refund flows.}
+            \item {Led a team of four to implement location-based pricing for India’s largest B2B fashion platform (3M+ products, 1L+ sellers), building multi-hierarchy pricing and multi-warehouse fulfillment engine, \textbf{increasing seller revenue by 15\%} and \textbf{reducing shipping costs by 50\%}.}
+            \item {Built backend services for Asia's largest theme park, enabling ticket booking and dynamic pricing across campaigns.}
+        }
     }
-\vspace{15pt} 
+\vspace{12pt}
 
 \cventry
     {Nagarro Software}  {\bf {Gurgaon, IN}}
     {\textnormal{\textit{Software Engineer  \hfill {January 2019 - September 2021}}}}
     {
-      \cvproject{UK's online car finance platform}{
-            \item {Developed core components of high-volume platform using Spring Boot, processing 1000+ daily loan applications.}
-            \item {Designed and optimized microservices architecture using new REST APIs, resulting in 35\% improved response time.}
-            \item {Implemented comprehensive testing strategy with JUnit and Mockito, while monitoring system performance with Splunk.}
-          }
+      \color{black}
+      \vspace{-1mm}
+      \begin{cvitems}
+            \item {Developed core microservice components for a high-volume car finance platform using Spring Boot, processing 1000+ daily loan applications with multi-lender and credit check integrations.}
+            \item {Designed and optimized REST APIs, achieving 35\% response time improvement. Implemented JUnit and Mockito test coverage with Splunk-based monitoring for production observability.}
+      \end{cvitems}
     }
-\vspace{10pt} 
+\vspace{10pt}
 
 \end{cventries}
 
